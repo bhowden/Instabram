@@ -1,0 +1,27 @@
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bramit_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.benhowden.instabram.ApproveActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/bram_it_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="bramIt"
+        android:layout_alignParentBottom="true"
+        android:text="Bram It!" />
+
+</RelativeLayout >
+

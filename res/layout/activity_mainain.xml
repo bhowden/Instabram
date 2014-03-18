@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/instabram_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.benhowden.instabram.MainainActivity" >
+
+    <Button
+        android:id="@+id/new_bram_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openBramIt"
+        android:layout_marginTop="115sp"
+        android:layout_marginBottom="15sp"
+        android:text="@string/bram_it" />
+
+    <Button
+        android:id="@+id/my_brams_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openMyBrams"
+        android:layout_marginBottom="15sp"
+        android:text="@string/my_brams" />
+    
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:id="@+id/instabram_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+
+            <Button
+                android:id="@+id/exit_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="exit"
+                android:text="@string/exit" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.benhowden.instabram"
+    android:largeHeap="true"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.benhowden.instabram.MainainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.benhowden.instabram.ViewBramsActivity"
+            android:label="@string/title_activity_view_brams"
+            android:parentActivityName="com.benhowden.instabram.MainainActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.benhowden.instabram.MainainActivity" />
+        </activity>
+        <activity
+            android:name="com.benhowden.instabram.FaceSelectorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_face_selector"
+            android:parentActivityName="com.benhowden.instabram.TakePictureActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.benhowden.instabram.MainainActivity" />
+        </activity>
+        <activity
+            android:name="com.benhowden.instabram.ApproveActivity"
+            android:label="@string/title_activity_approve"
+            android:parentActivityName="com.benhowden.instabram.MainainActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.benhowden.instabram.FaceSelectorActivity" />
+        </activity>
+        <activity
+            android:name="com.benhowden.instabram.BramItActivity"
+            android:label="@string/title_activity_bram_it"
+            android:parentActivityName="com.benhowden.instabram.MainainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.benhowden.instabram.MainainActivity" />
+        </activity>
+    </application>
+
+</manifest>
